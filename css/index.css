@@ -1,0 +1,724 @@
+/*
+* @Author: yachu
+* @Date:   2018-04-03 18:52:40
+* @Last Modified by:   yachu
+* @Last Modified time: 2018-04-09 11:50:49
+*/
+
+/* 顶部广告 */
+.top-ad .ad {
+    width: 100%;
+    height: 80px;
+    background: url(../images/index_head.jpg) no-repeat center top;
+    position: relative;
+}
+
+.top-ad .close {
+    width: 30px;
+    height: 30px;
+    background: url(../images/closed.png);
+    position: absolute;
+    right: 220px;
+    top: 25px;
+    cursor: pointer;
+}
+
+/* 顶部导航 */
+.top-head {
+    width: 100%;
+    background-color: #1b1b1b;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    color: #fff;
+}
+
+.top-nav .logo {
+    width: 200px;
+    height: 64px;
+    margin-top: 8px;
+    float: left;
+    margin-left: 30px;
+}
+
+.top-nav .nav {
+    width: 600px;
+    float: left;
+    box-sizing: border-box;
+    margin-left: 30px;
+}
+
+.top-nav .nav li {
+    height: 80px;
+    line-height: 80px;
+    float: left;
+    text-align: center;
+}
+
+.top-nav .nav li a {
+    display: inline-block;
+    width: 70px;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.top-nav .nav li.current {
+    background-color: #ff5a5f;
+}
+
+.top-nav .help {
+    padding-top: 10px;
+    text-align: right;
+}
+
+.top-nav .help p {
+    padding: 5px 0;
+}
+
+.top-nav .help span {
+    color: #ff5a5f;
+}
+
+/* 顶部 banner */
+#banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.screen {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+}
+
+.screen ul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.screen ul li {
+    float: left;
+    width: 100%;
+    height: 600px;
+}
+
+.screen ul li img {
+    width: 100%;
+}
+
+.screen ol {
+    width: 120px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -60px;
+    display: none;
+}
+
+.screen ol li {
+    float: left;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: rgba(225, 225, 225, .5);
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.screen ol li.current {
+    background-color: #ff5a5f;
+}
+
+#arrow {
+    display: none;
+    z-index: 10;
+}
+
+#arrow span {
+    width: 40px;
+    height: 60px;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    margin-top: -20px;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: '黑体';
+    color: #fff;
+    background: #000;
+    opacity: 0.3;
+    border: 1px solid #fff;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+#arrow #left {
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+#arrow #right {
+    border-right: none;
+    right: 0px;
+    left: auto;
+    border-radius: 5px 0 0 5px;
+}
+
+/* 指南 */
+.guide {
+    margin-top: 30px;
+}
+
+/* 3D轮播 */
+.wrapper {
+    position: relative;
+    float: left;
+    margin-left: 60px;
+}
+
+.nav-arrows {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.nav-arrows a:first-of-type {
+    left: 318px;
+}
+
+.nav-arrows a:last-of-type {
+    left: -360px;
+}
+
+.sb-description {
+    bottom: 330px;
+}
+
+.sb-description h3 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* 服务 gif图 */
+.service {
+    width: 362px;
+    float: right;
+    margin-right: 40px;
+    margin-top: 40px;
+}
+
+.service ul li {
+    width: 120px;
+    height: 130px;
+    float: left;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    padding-top: 90px;
+    background: no-repeat;
+}
+
+.service ul li:last-of-type {
+    border: none;
+}
+
+.service ul li:nth-of-type(3) {
+    border-right: none;
+}
+
+.service ul li:nth-of-type(6) {
+    border-right: none;
+}
+
+.service ul li:nth-of-type(7) {
+    border-bottom: none;
+}
+
+.service ul li:nth-of-type(8) {
+    border-bottom: none;
+}
+/* 指南结束 */
+
+/* 蜜柚手风琴 */
+.column {
+    width: 1155px;
+    height: 460px;
+    position: relative;
+}
+
+.column ul {
+    list-style: none;
+    width: 1155px;
+    height: 460px;
+    position: relative;
+}
+
+.column li {
+    width: 231px;
+    height: 460px;
+    float: left;
+    position: relative;
+}
+
+.column li a {
+    display: block;
+    width: 231px;
+    height: 460px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.column li img {
+    width: 231px;
+    height: 400px;
+    margin-top: 30px;
+    vertical-align: middle;
+    border: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.column li span {
+    width: 231px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+}
+
+.column li span:last-of-type {
+    bottom: 50px;
+}
+
+.column li div {
+    position: absolute;
+}
+
+/* 艺龙手风琴 */
+.container {
+    margin-top: 20px;
+    width: 1155px;
+    height: 260px;
+    overflow: hidden;
+}
+
+.container ul {
+    width: 1300px;
+}
+
+.container li {
+    width: 165px;
+    height: 260px;
+    float: left;
+}
+
+/* 主体部分 */
+.main .address h2 {
+    width: 385px;
+    margin: 15px auto;
+}
+
+.main .pic ul li {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pic ul li img {
+    height: 320px;
+    transition: all .5s;
+}
+
+.pic ul li img:hover {
+    transform: scale(1.2);
+}
+
+.pic ul li:nth-of-type(3) img {
+    width: 340px;
+}
+
+.pic ul li:nth-of-type(5) img {
+    width: 420px;
+}
+
+.normal {
+    margin-right: 0!important;
+}
+
+.pic ul li .shadow {
+    height: 320px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.pic ul li:nth-of-type(1) .shadow {
+    width: 700px;
+}
+
+.pic ul li:nth-of-type(2) .shadow {
+    width: 420px;
+}
+
+.pic ul li:nth-of-type(3) .shadow {
+    width: 340px;
+}
+
+.pic ul li:nth-of-type(4) .shadow {
+    width: 340px;
+}
+
+.pic ul li:nth-of-type(5) .shadow {
+    width: 420px;
+}
+
+.pic .shadow {
+    background-color: #000;
+    opacity: .5;
+    display: none;
+    margin-top: 0;
+}
+
+.pic ul li a {
+    position: absolute;
+    top: 125px;
+    left: 135px;
+    background: #fff url(../images/search-btn.png) no-repeat center center;
+    color: #fff;
+    font-size: 36px;
+    display: none;
+    z-index: 2;
+}
+
+.pic ul li a b {
+    font-weight: 400;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+}
+
+.pic ul li:nth-of-type(1) a {
+    left: 278px;
+    background: none;
+}
+
+.pic ul li:nth-of-type(2) a {
+    left: 138px;
+    background: none;
+}
+
+.pic ul li:nth-of-type(3) a {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.pic ul li:nth-of-type(4) a {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.pic ul li:nth-of-type(5) a {
+    left: 175px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.main .more {
+    text-align: center;
+}
+
+.main .more a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.more a:hover {
+    color: #ff5a5f;
+}
+
+/* story */
+.story-bgc {
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.story .story-title h2 {
+    width: 257px;
+    height: 84px;
+    margin: 50px auto;
+}
+
+.story-main .fl {
+    width: 360px;
+}
+
+.main-l,
+.main-c {
+    margin-right: 30px;
+}
+
+.story-main .fl h3 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.story-main .fl span {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.story-main .fl p {
+    padding: 10px 0;
+    text-indent: 2em;
+    border-top: 1px solid #959595;
+}
+
+.story-more {
+    text-align: center;
+}
+
+.story-more a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.story-more a:hover {
+    color: #ff5a5f;
+}
+
+.main-l,
+.main-c,
+.main-r {
+    position: relative;
+}
+
+.story-main .img-box {
+    position: relative;
+}
+
+.story-main .shadow {
+    background-color: #000;
+    opacity: .5;
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+}
+
+.main-l a,
+.main-c a,
+.main-r a {
+    display: block;
+    padding: 8px 20px;
+    margin: 0 auto;
+    width: 98px;
+    height: 18px;
+    color: #fff;
+    border: 1px solid #fff;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    margin-top: 180px;
+    margin-left: -70px;
+    border-radius: 3px;
+    display: none;
+}
+
+.main-l a:hover,
+.main-c a:hover,
+.main-r a:hover {
+    background-color: #ebebeb;
+    color: #333;
+}
+
+/* slogan */
+.slogan ul {
+    margin: 20px 0;
+}
+
+.slogan ul li {
+    float: left;
+    margin: 0 25px;
+}
+
+.slogan ul li dl img {
+    transition: all .5s;
+}
+
+.slogan ul li dl img:hover {
+    transform: rotate(360deg);
+}
+
+.slogan ul li dl dt,
+.slogan ul li dl dd {
+    width: 238px;
+    text-align: center;
+}
+
+.slogan ul li dl dd:nth-of-type(1) {
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.slogan ul li dl dd:not(:nth-of-type(1)) {
+    color: #707070;
+    font-size: 14px;
+}
+
+.slogan-b {
+    padding-top: 20px;
+    border-top: 1px solid #d2d2d2;
+}
+
+.slogan-b a {
+    display: block;
+    text-align: center;
+    width: 205px;
+    padding: 10px 16px;
+    background-color: #ff5a5f;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #fff;
+    margin: 0 auto;
+    border-color: #adadad;
+}
+
+.slogan-b a:hover {
+    color: #333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+}
+
+/* footer */
+.footer {
+    color: #fff;
+}
+
+.f-top {
+    border-top: 4px solid #ff5a5f;
+    background-color: #434343;
+    font-style: 14px;
+    padding: 30px;
+    height: 130px;
+}
+
+.f-bottom {
+    background-color: #313131;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.tel {
+    float: left;
+}
+
+.tel span {
+    font-weight: 700;
+}
+
+.tel p {
+    font-size: 25px;
+}
+
+.about {
+    float: left;
+    width: 700px;
+}
+
+.about dl {
+    float: left;
+    padding-left: 100px;
+}
+
+.about dl dt {
+    padding: 5px 0px;
+    position: relative;
+}
+
+.about dl dd {
+    padding: 5px 0px;
+    font-size: 14px;
+}
+
+.about dl dt::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    width: 4px;
+    height: 20px;
+    background-color: #ff5a5f;
+}
+
+.about dd:hover {
+    color: #ff5a5f;
+}
+
+.wechat {
+    float: left;
+}
+
+.wechat p {
+    padding: 5px 0;
+}
+
+.wechat-l {
+    float: left;
+}
+
+.wechat-r {
+    float: left;
+    padding: 5px 0 0 50px;
+    display: none;
+}
+
+.wechat-r img {
+    width: 115px;
+    height: 115px;
+}
+
+.copyright p {
+    text-align: center;
+}
+
+/* 小火箭 */
+.rocket {
+    position: fixed;
+    right: 20px;
+    top: 70%;
+    display: none;
+}
+
+.music{
+    height: 20px;
+}

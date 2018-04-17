@@ -1,0 +1,54 @@
+body,ul,ol,dl,dd,p{
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol,dl {
+    list-style: none;
+}
+
+img {
+    /* 去掉图片底部空白 */
+    vertical-align: middle;
+    border:none;
+}
+
+a{
+    text-decoration: none;
+    color:#707070;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+body{
+    font-size: 14px;
+}
+
+/* 版心 */
+.wrap{
+    /* width: 1140px; */
+    width: 1155px;
+    margin: 0 auto;
+}
+
+/* 伪元素清除浮动 */
+.clearfix:after {
+    content: '';
+    height: 0;
+    line-height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1; /*兼容IE*/
+}
+
+.fl{
+    float: left;
+}

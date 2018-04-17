@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fullpage</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.fullpage.min.js"></script>
+    <style>
+	    * {
+	        margin: 0;
+	        padding: 0;
+	    }
+
+	    .section {
+	        background-repeat: no-repeat;
+	        overflow: hidden;
+	    }
+
+	    .article {
+	        color: #fff;
+	        margin-top: 300px;
+	        margin-left: 100px;
+	        width: 600px;
+	        letter-spacing: 3px;
+	        text-shadow: 1px 1px 10px #666;
+	    }
+
+	    .article h2 {
+	        font-size: 36px;
+	    }
+
+	    .article p {
+	        padding: 10px 0;
+	        font-size: 20px;
+	    }
+
+	    .article span {
+	        display: block;
+	        font-size: 18px;
+	    }
+
+	    .first {
+	        width: 100%;
+	        margin-left: 0;
+	    }
+
+	    .first p {
+	        width: 100%;
+	        text-align: center;
+	        font-size: 36px;
+	        text-shadow: 1px 1px 10px #666;
+	        margin-top: 350px;
+	        color: #fff;
+	        letter-spacing: 25px;
+	    }
+
+	    .first.current p {
+	        letter-spacing: 5px;
+	        transition: all 1s ease-out;
+	    }
+
+	    .second h2,
+	    .third h2,
+	    .fourth h2,
+	    .fifth h2,
+	    .sixth h2 {
+	        transform: translate(-600px, 0px);
+	    }
+
+	    .second p,
+	    .third p,
+	    .fourth p,
+	    .fifth p,
+	    .sixth p {
+	        transform: translate(-800px, 0px);
+	    }
+
+	    .second span,
+	    .third span,
+	    .fourth span,
+	    .fifth span,
+	    .sixth span {
+	        transform: translate(2000px, 0px);
+	    }
+
+	    .second.current h2,
+	    .second.current p,
+	    .third.current h2,
+	    .third.current p,
+	    .fourth.current h2,
+	    .fourth.current p,
+	    .fifth.current h2,
+	    .fifth.current p,
+	    .sixth.current h2,
+	    .sixth.current p {
+	        transform: translate(0px, 0px);
+	        transition: all 1s ease-in-out;
+	    }
+
+	    .second.current span,
+	    .third.current span,
+	    .fourth.current span,
+	    .fifth.current span,
+	    .sixth.current span {
+	        transform: translate(0px, 0px);
+	        transition: all 2s ease-in-out;
+	    }
+
+	    /*视频*/
+	    html,
+	    body {
+	        width: 100%;
+	        height: 100%;
+	        overflow: hidden;
+	    }
+
+	    .door video {
+	        width: 100%;
+	        height: 100%;
+	    }
+
+	    .door {
+	        position: relative;
+	        perspective: 1000px;
+	    }
+
+	    .door-l {
+	        content: '';
+	        position: absolute;
+	        left: 0;
+	        top: 0;
+	        width: 50%;
+	        height: 100%;
+	        background-image: url(./images/bg_l.jpg);
+	        background-size: 100% auto;
+	        opacity: 1;
+	        transition: all 3s;
+	        transform-origin: left center;
+	    }
+
+	    .door-r {
+	        content: '';
+	        position: absolute;
+	        right: 0;
+	        top: 0;
+	        width: 50%;
+	        height: 100%;
+	        background-image: url(./images/bg_r.jpg);
+	        background-size: 100% auto;
+	        opacity: 1;
+	        transition: all 3s;
+	        transform-origin: right center;
+	    }
+
+	    .zero {
+	        width: 100%;
+	        margin-left: 0;
+	        margin-top: 0;
+	        position: relative;
+	    }
+
+	    .zero p {
+	        width: 100%;
+	        text-align: center;
+	        font-size: 12px;
+	        text-shadow: 1px 1px 10px #666;
+	        color: #fff;
+	        letter-spacing: 5px;
+	        position: absolute;
+	        top: 50%;
+	        z-index: 100;
+	        opacity: 0;
+	    }
+
+	    .zero.current p {
+	        font-size: 50px;
+	        opacity: 1;
+	        transition: all 1s ease-out;
+	    }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <div class="section">
+            <!-- 视频 -->
+            <div class="door article zero">
+                <p>满眼绿色 自驾穿越内蒙古大草原</p>
+                <video autoplay="autoplay" controls></video>
+                <div class="door-l"></div>
+                <div class="door-r"></div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="article first">
+                <p>自驾无人区神秘地带 带你走进最真实的无人区</p>
+            </div>
+        </div>
+        <div class="section">
+            <div class="article second">
+                <h2>G219新藏线自驾攻略</h2>
+                <p>西南地区 西藏线路</p>
+                <span>新藏全长1455公里，是世界上海拔最高的公路，途中翻越5000米以上大山5座，其中最高的界山达坂海拔高达5248米，是几条进藏路线中最危险的，特别是界山达坂和死人沟。</span>
+            </div>
+        </div>
+        <div class="section">
+            <div class="article third">
+                <h2>罗布泊+兴岩地画自驾攻略</h2>
+                <p>西北地区 新疆线路</p>
+                <span>“世外桃源”兴地村，既当年斯文赫定发现楼兰古城最后一个补给村庄，现在这个村庄已经没有什么人了，只有3,4户牧羊人还常年生活在大山包围的兴地村。</span>
+            </div>
+        </div>
+        <div class="section">
+            <div class="article fourth">
+                <h2>罗布泊+阿尔金山自驾攻略</h2>
+                <p>西北地区 新疆线路</p>
+                <span>阿尔金山真的美到爆了，这里有成群的藏野驴，藏羚羊，野牦牛以及绝美的日出，日落，还有第三大咸水湖，你可以和臧牦牛赛跑，也可以和藏驴子驰骋，这里是动物的天堂，确是人类的禁区。</span>
+            </div>
+        </div>
+        <div class="section">
+            <div class="article fifth">
+                <h2>G318川藏南线</h2>
+                <p>西南地区 西藏线路</p>
+                <span>川藏线分南北两线，南线主要以自然风光见长，北线则自然人文并存。川藏南线自东向西，穿行于西藏东部的高山峡谷区。跨越金沙江、澜沧江、怒江、雅鲁藏布江和著名的念青唐古拉山脉、冈底斯山脉等。</span>
+            </div>
+        </div>
+        <div class="section">
+            <div class="article sixth">
+                <h2>唐蕃古道自驾攻略</h2>
+                <p>西南地区 西藏线路</p>
+                <span>唐蕃古道起自陕西西安（即长安），途经甘肃、青海，至西藏拉萨（即逻些），全长3千余公里。整个古道横贯中国西部，跨越举世闻名的世界屋脊，联通我国西南的友好邻邦，故亦有丝绸南路之称。</span>
+            </div>
+        </div>
+    </div>
+    <script>
+	    // 视频
+	    var door = document.getElementsByClassName('door')[0];
+	    var doorP = door.children[0];
+	    var doorLeft = document.getElementsByClassName('door-l')[0];
+	    var doorRight = document.getElementsByClassName('door-r')[0];
+	    var video = document.getElementsByTagName('video')[0];
+	    var height = document.body.clientHeight || document.documentElement.clientHeight;
+	    door.onclick = function() {
+	        video.src = './audio/30sec_internet_FHD - converted(720p).mp4';
+	        video.style.height = height + 'px';
+	        door.style.background = 'url(./images/mudidi-bg.jpg)';
+	        doorLeft.style.transform = 'rotateY(-180deg)';
+	        doorLeft.style.opacity = '0';
+	        doorRight.style.transform = 'rotateY(180deg)';
+	        doorRight.style.opacity = '0';
+	        doorP.style.opacity = '0';
+	    };
+	    $(function() {
+	        var $width = $(window).width();
+	        var $height = $(window).height();
+	        $('.map .section:gt(0)').each(function(i, div) {
+	            $(div).css({
+	                'background-image': 'url(./images/201610_' + (i + 1) + '.jpg)'
+	            });
+	        });
+	        $('.map').fullpage({
+	            afterLoad: function(anchorLink, index) {
+	                $('.article').removeClass('current');
+	                setTimeout(function() {
+	                    $('.article').eq(index - 1).addClass('current');
+	                }, 0);
+	                // 视频
+	                doorLeft.style.transform = 'rotateY(0deg)';
+	                doorLeft.style.opacity = '1';
+	                doorRight.style.transform = 'rotateY(0deg)';
+	                doorRight.style.opacity = '1';
+	                doorP.style.opacity = '1';
+	            }
+	        });
+	    })
+    </script>
+</body>
+</html>
